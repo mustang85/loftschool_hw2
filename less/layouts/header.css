@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'elektra_light_proregular';
+  src: url('elektra_light_pro-webfont.eot');
+  src: url('elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'), url('elektra_light_pro-webfont.woff2') format('woff2'), url('elektra_light_pro-webfont.woff') format('woff'), url('elektra_light_pro-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* backgraound */
+/* colors */
+/* size */
+/* line-height */
+/* fonts */
+/* header */
+.wrap__head {
+  background: #d9e4ef url('../../app/img/bg_head.jpg') center 0 no-repeat;
+  width: 100%;
+  height: 120px;
+}
+header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 120px;
+  padding: 25px 0 0;
+  width: 1000px;
+}
