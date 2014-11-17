@@ -1,0 +1,30 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+
+.pagination {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  .list__item {
+    display: inline;
+    margin: 0 7px 0 0;  
+  }
+
+  .list__link,  
+  .list__item_current {
+    color: @link-color;
+    font-size: 15px;  
+  }
+
+  .list__item_current {
+    color: @body-color;
+  }
+  
+  .list__link_prew,
+  .list__link_next {
+    text-decoration: none;  
+  }
+
+}

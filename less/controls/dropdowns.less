@@ -1,0 +1,57 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+
+.dropdown {
+  border: 1px solid #dae1eb;
+  position: relative;
+
+  .caret {
+    background-color: @link-color;
+    background-position: -15px -128px;
+    position: absolute;
+    cursor: pointer;
+    right: -11px;
+    .size(26px,24px);
+  }
+
+  .btn {
+    background: transparent;
+    border: 0;
+    color: @body-color;
+    line-height: 24px;
+    padding: 0 7px;
+    text-align: left;
+    .size(100%,24px);
+  }
+
+  .list {
+    border-top: 1px solid #dae1eb;
+    display: none;
+    padding: 0 7px;
+  }
+
+  .list__item {
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .list__link {
+    color: @body-color;
+    font-size: @body-size;
+    text-decoration: none;
+
+    &:hover {
+      color: #bed1e3;
+    }
+  }
+
+}
+
+.main .dropdown {
+  font-size: 14px;
+  position: absolute;
+  top: -4px;
+  right: 205px;
+  text-align: left;
+  width: 133px;
+}

@@ -18,24 +18,7 @@
 /* line-height */
 /* fonts */
 /* header */
-body {
-  background: #ffffff;
-  color: #5c7b98;
-  font: 14px/20px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
-}
-a {
-  color: #00b9fe;
-  font-size: 15px;
-}
-h2 {
-  font: 25px/25px 'elektra_light_probold', Arial, Helvetica, sans-serif;
-}
-h3 {
-  font-size: 15px;
-}
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.main {
+  margin: 0 auto;
+  width: 1000px;
 }

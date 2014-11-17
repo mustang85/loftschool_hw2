@@ -18,24 +18,32 @@
 /* line-height */
 /* fonts */
 /* header */
-body {
-  background: #ffffff;
+nav {
+  width: 100%;
+}
+nav .list__item,
+nav .list__item .list__item {
+  border-bottom: 1px solid #dae1eb;
+  margin: 1px 0 0;
+  position: relative;
+}
+nav .list__item:last-child {
+  border-bottom: 0;
+}
+nav .list__item_active > .list__link {
+  background: #00b9fe;
+  color: #FFF;
+}
+nav .list__link {
   color: #5c7b98;
-  font: 14px/20px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
+  display: block;
+  font: 15px/15px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
+  padding: 10px 0 7px 20px;
+  text-decoration: none;
 }
-a {
-  color: #00b9fe;
-  font-size: 15px;
+nav .list__link:hover {
+  background: #dce6f0;
 }
-h2 {
-  font: 25px/25px 'elektra_light_probold', Arial, Helvetica, sans-serif;
-}
-h3 {
-  font-size: 15px;
-}
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+nav .list__item .list .list__link {
+  padding: 7px 0 10px 32px;
 }

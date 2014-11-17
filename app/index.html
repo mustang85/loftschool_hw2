@@ -21,111 +21,184 @@
 
             <div class="wrap__head">
                 <header>
-                    <div class="contact__shop">
-                        <a href="#">+7 (921) 322 12 32</a>
-                        <a href="#">manager@company.com</a>
-                    </div>
                     <div class="logo">
                         <a class="logo__link" href="#">
                             <img class="logo__up" src="img/logo_up.png" height="57" width="199" alt="" />
                         </a>
                     </div>
+                    <div class="contact__shop">
+                        <a class="contact__link contact__link_phone" href="#">
+                            <span class="contact__link__code">+7 (921)</span> 320 12 32</a>
+                        <a class="contact__link contact__link_mail" href="#">manager@company.com</a>
+                    </div>
                 </header>
             </div>
 
             <div class="main">
-                <ol class="breadcrumb">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Library</a></li>
-                  <li class="active">Data</li>
-                </ol>
+                <div class="panel main__panel">
+                   <ol class="breadcrumb">
+                      <li><a href="#">Главная</a></li>
+                      <li><a href="#">Ай Пон</a></li>
+                      <li class="active">Каталог</li>
+                    </ol>
+                    <ul class="list pagination">
+                        <li class="list__item">
+                            <a class="list__link list__link_prew" href="#"><span>&laquo;</span></a>
+                        </li>
+                        <li class="list__item list__item_current">1</li>
+                        <li class="list__item"><a class="list__link" href="#">2</a></li>
+                        <li class="list__item"><a class="list__link" href="#">3</a></li>
+                        <li class="list__item"><a class="list__link" href="#">4</a></li>
+                        <li class="list__item"><a class="list__link" href="#">5</a></li>
+                        <li class="list__item"><a class="list__link" href="#">Все</a></li>
+                        <li class="list__item">
+                            <a class="list__link list__link_next" href="#"><span>&raquo;</span></a>
+                        </li>
+                      </ul>
+                      <div class="dropdown">
+                          <button class="btn" id="dropdownMenu1">
+                            Сеткой
+                            <span class="icon caret"></span>
+                          </button>
+                          <ul class="list dropdown-menu">
+                            <li class="list__item">
+                                <a class="list__link" href="#">Сеткой</a>
+                            </li>
+                            <li class="list__item">
+                                <a class="list__link" href="#">Линиями</a>
+                            </li>
+                          </ul>
+                        </div>
+                </div>
+                
                 <aside>
                     <nav>
-                        <ul>
-                            <li>iPhone 4s
-                                <ul>
-                                    <li>iPhone 5</li>
-                                    <li>iPhone 5s с </li>
-                                    <li>эксклюзивным дизайном</li>
-                                    <li>iPhone 6</li>
-                                    <li>iPhone 6 plus</li>
-                                </ul>
+                        <ul class="list">
+                            <li class="list__item list__item_active">
+                                <a class="list__link" href="#">iPhone</a>
+                                    <ul class="list">
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 4s</a>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 5</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 5s с эксклюзивным дизайном</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 6</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 6 plus</a> 
+                                        </li>
+                                    </ul>
+
                             </li>
-                            <li>iPad</li>
-                            <li>iMac</li>
-                            <li>Macbook</li>
-                            <li>iPod</li>
-                            <li>Другое</li>
+                            <li class="list__item">
+                                <a class="list__link" href="#">iPad</a>
+                            </li>
+                            <li class="list__item">
+                                <a class="list__link" href="#">iMac</a>
+                            </li>
+                            <li class="list__item">
+                                <a class="list__link" href="#">Macbook</a>
+                            </li>
+                            <li class="list__item">
+                                <a class="list__link" href="#">iPod</a>
+                            </li>
+                            <li class="list__item">
+                                <a class="list__link" href="#">Другое</a>
+                            </li>
                         </ul>
                     </nav>
                 </aside>
+
                 <div class="content">
-                    <ul class="list">
-                        <li class="list__item">
-                            <div class="list__photo"></div>
-                            <div class="list_description">
-                                <h3 class="list_description__title">
-                                    <a class="list_description__link" href="#">Apple Thunderbolt Display 27"</a>
+                    <div class="catalog">
+                        <ul class="list">
+                            <li class="list__item">
+                                <div class="list__photo">
+                                <a class="list__photo__link" href="#">
+                                    <img src="img/cat1.jpg" height="101" width="131" alt="" />
+                                </a>
+                                </div>
+                                <h3 class="list__title">
+                                    <a class="list__title__link" href="#">Apple Thunderbolt Display 27"</a>
                                 </h3>
-                                <p class="list_description__title">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
-                            </div>    
-                        </li>
+                                <p class="list__txt">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>  
+                            </li>
 
-                        <li class="list__item">
-                            <div class="list__photo"></div>
-                            <div class="list_description">
-                                <h3 class="list_description__title">
-                                    <a class="list_description__link" href="#">Apple iMac 27"</a>
+                            <li class="list__item">
+                                <div class="list__photo">
+                                    <a class="list__photo__link" href="#">
+                                        <img src="img/cat2.jpg" height="119" width="131" alt="" />
+                                    </a>   
+                                </div>
+                                <h3 class="list__title">
+                                    <a class="list__title__link" href="#">Apple iMac 27"</a>
                                 </h3>
-                                <p class="list_description__title">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
-                            </div>    
-                        </li>
+                                <p class="list__txt">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p> 
+                            </li>
 
-                        <li class="list__item">
-                            <div class="list__photo"></div>
-                            <div class="list_description">
-                                <h3 class="list_description__title">
-                                    <a class="list_description__link" href="#">iPhone 5s Gold</a>
+                            <li class="list__item">
+                                <div class="list__photo">
+                                    <a class="list__photo__link" href="#">
+                                        <img src="img/cat3.jpg" height="96" width="101" alt="" />
+                                    </a>
+                                </div>
+                                <h3 class="list__title">
+                                    <a class="list__title__link" href="#">iPhone 5s Gold</a>
                                 </h3>
-                                <p class="list_description__title">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
-                            </div>    
-                        </li>
+                                <p class="list__txt">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>   
+                            </li>
 
-                        <li class="list__item">
-                            <div class="list__photo"></div>
-                            <div class="list_description">
-                                <h3 class="list_description__title">
-                                    <a class="list_description__link" href="#">iPad Air Wi-Fi + Cellular 128GB - Silver</a>
+                            <li class="list__item">
+                                <div class="list__photo">
+                                    <a class="list__photo__link" href="#">
+                                        <img src="img/cat4.jpg" height="113" width="105" alt="" />
+                                    </a>
+                                </div>
+                                <h3 class="list__title">
+                                    <a class="list__title__link" href="#">iPad Air Wi-Fi + Cellular 128GB - Silver</a>
                                 </h3>
-                                <p class="list_description__title">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
-                            </div>    
-                        </li>
+                                <p class="list__txt">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
+                            </li>
 
-                        <li class="list__item">
-                            <div class="list__photo"></div>
-                            <div class="list_description">
-                                <h3 class="list_description__title">
-                                    <a class="list_description__link" href="#">Apple iPod nano 7G 16 ГБ Blue</a>
+                            <li class="list__item">
+                                <div class="list__photo">
+                                    <a class="list__photo__link" href="#">
+                                        <img src="img/cat5.jpg" height="92" width="105" alt="" />
+                                    </a>
+                                </div>
+                                <h3 class="list__title">
+                                    <a class="list__title___link" href="#">Apple iPod nano 7G 16 ГБ Blue</a>
                                 </h3>
-                                <p class="list_description__title">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
-                            </div>    
-                        </li>
+                                <p class="list__txt">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
+                            </li>
 
-                        <li class="list__item">
-                            <div class="list__photo"></div>
-                            <div class="list_description">
-                                <h3 class="list_description__title">
-                                    <a class="list_description__link" href="#">Роутер Wi-Fi Apple AirPort Extreme Base Station</a>
+                            <li class="list__item">
+                                <div class="list__photo">
+                                    <a class="list__photo__link" href="#">
+                                        <img src="img/cat6.jpg" height="41" width="111" alt="" />
+                                    </a>
+                                </div>
+                                <h3 class="list__title">
+                                    <a class="list__title__link" href="#">Роутер Wi-Fi Apple AirPort Extreme Base Station</a>
                                 </h3>
-                                <p class="list_description__title">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p>
-                            </div>    
-                        </li>
-                        
-                    </ul>
+                                <p class="list_description__title">Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг</p> 
+                            </li>
+                            
+                        </ul>
+                    </div>
 
                     <div class="intro">
-                        <h2 class="intro__title"></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p>
+                        <h2 class="intro__title">Пара слов о магазине</h2>
+                        <p class="intro__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p>
                         <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
                     </div>
 
@@ -134,39 +207,79 @@
 
             <div class="wrap_foot">
                 <footer>
-                    <div class="share"></div>
-                    <div class="logo"></div>
-                    <div class="wrap">
-                        <div class="wrap_inner">
-                            <h5 class="h5"></h5>
+                    <div class="logo">
+                        <a href="#">
+                            <img src="img/logo_down.png" height="39" width="139" alt="">
+                        </a>
+                    </div>
+
+                    <div class="footer__menu">
+                        <div class="wrap__inner">
+                            <h5 class="h5">О магазине</h5>
                             <ul class="list">
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">О нас</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Наши цены</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Наши скидки</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Акции</a>
+                                </li>
                             </ul>    
                         </div>
                         
-                        <div class="wrap_inner">
-                            <h5 class="h5"></h5>
+                        <div class="wrap__inner">
+                            <h5 class="h5">Каталог</h5>
                             <ul class="list">
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Смартфоны</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Планшеты</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Компьютеры</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Аксессуары</a>
+                                </li>
                             </ul>    
                         </div>
                         
-                        <div class="wrap_inner">
-                            <h5 class="h5"></h5>
+                        <div class="wrap__inner">
+                            <h5 class="h5">Контакты</h5>
                             <ul class="list">
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
-                                <li class="list__item"><a href="#" class="list__link"></a></li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Телефоны</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Адреса</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Карта проезда</a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="list__link">Обратная связь</a>
+                                </li>
                             </ul>    
                         </div>
                     </div>
+
+                    <div class="download">
+                        <a class="icon download__link appstore" href="#"></a>
+                        <a class="icon download__link google_play" href="#"></a>
+                    </div>
+
+                    <div class="share">
+                        <a class="icon share__link vk" href="#"></a>
+                        <a class="icon share__link facebook" href="#"></a>
+                        <a class="icon share__link twitter" href="#"></a>
+                    </div>
+
                 </footer>
                 </div>
             </div>

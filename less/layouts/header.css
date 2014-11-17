@@ -1,7 +1,14 @@
 @font-face {
   font-family: 'elektra_light_proregular';
-  src: url('elektra_light_pro-webfont.eot');
-  src: url('elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'), url('elektra_light_pro-webfont.woff2') format('woff2'), url('elektra_light_pro-webfont.woff') format('woff'), url('elektra_light_pro-webfont.ttf') format('truetype');
+  src: url('../fonts/elektra_light_pro-webfont.eot');
+  src: url('../fonts/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/elektra_light_pro-webfont.woff2') format('woff2'), url('../fonts/elektra_light_pro-webfont.woff') format('woff'), url('../fonts/elektra_light_pro-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_light_probold';
+  src: url('../fonts/font-webfont.eot');
+  src: url('../fonts/font-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font-webfont.woff2') format('woff2'), url('../fonts/font-webfont.woff') format('woff'), url('../fonts/font-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,6 +20,7 @@
 /* header */
 .wrap__head {
   background: #d9e4ef url('../../app/img/bg_head.jpg') center 0 no-repeat;
+  margin: 0 0 43px;
   width: 100%;
   height: 120px;
 }
@@ -23,5 +31,39 @@ header {
   margin: 0 auto;
   height: 120px;
   padding: 25px 0 0;
+  position: relative;
   width: 1000px;
+}
+.contact__shop {
+  top: 25px;
+  position: absolute;
+  right: 0;
+}
+.contact__link {
+  display: block;
+  color: #5c7b98;
+  font-size: 25px;
+  line-height: 25px;
+  text-decoration: none;
+}
+.contact__link__code {
+  color: #00b9fe;
+  font-size: 15px;
+  position: relative;
+  top: -9px;
+}
+.contact__link_phone {
+  float: right;
+  margin: 0 0 14px;
+  position: relative;
+  line-height: 11px;
+}
+.contact__link_mail {
+  font-size: 17px;
+  clear: both;
+  line-height: 17px;
+}
+.contact__link_mail:hover {
+  color: #613993;
+  text-decoration: underline;
 }

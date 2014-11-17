@@ -5,6 +5,7 @@
 
 .wrap__head {
 	background: @bg-color_head @bg-img_head center 0 no-repeat;
+	margin: 0 0 43px;
 	.size(100%,120px);
 }
 
@@ -13,9 +14,45 @@ header {
 	margin: 0 auto;
 	height: 120px;
 	padding: 25px 0 0;
+	position: relative;
 	width: @header-w;
 }
 
-.contact__shop a {
-	
+.contact__shop {
+  top: 25px;
+  position: absolute;
+  right: 0;
+}
+
+.contact__link {
+  display: block;
+  color: #5c7b98;
+  font-size: @h2-size;
+  line-height: @h2-line-h;
+  text-decoration: none;
+}
+
+.contact__link__code {
+  color: @link-color;
+  font-size: @link-size;
+  position: relative;
+  top: -9px;
+}
+
+.contact__link_phone {
+  float: right;
+  margin: 0 0 14px;
+  position: relative;
+  line-height: 11px;
+}
+
+.contact__link_mail {
+  font-size: 17px;
+  clear: both;
+  line-height: 17px;
+}
+
+.contact__link_mail:hover {
+  color: #613993;
+  text-decoration: underline;
 }

@@ -31,14 +31,14 @@ gulp.task('css', function () {
 
 // html
 gulp.task('html', function () {
-	gulp.src('app/index.html')
+	gulp.src('app/*.html')
 	.pipe(connect.reload());
 });
 
 // watch
 gulp.task('watch', function () {
 	gulp.watch('less/*.css', ['css']);
-	gulp.watch('app/index.html', ['html']);
+	gulp.watch('app/*.html', ['html']);
 });
 
 // default

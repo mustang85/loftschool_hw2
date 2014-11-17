@@ -1,0 +1,22 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 6px 0 5px;
+  color: #ccc;
+  content: ">";
+}
+
+.breadcrumb a {
+  color: @link-color;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.breadcrumb > .active {
+  color: #5c7b98;
+}

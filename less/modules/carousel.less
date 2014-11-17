@@ -1,0 +1,91 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  .size(740px,300px);
+
+  .item {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.carousel-inner {
+  overflow: hidden;
+  width: 10000px;
+}
+
+.carousel-caption {
+  padding: 15px 24px 10px;
+  position: absolute;
+  bottom: 6px;
+  width: 692px;
+}
+
+.carousel-shadow {
+  background: #000;
+  content: '';
+  display: block;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-caption-title {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 5px;
+  position: relative;
+  z-index: 10;
+}
+
+.carousel-caption-txt {
+  color: #FFF;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 5px;
+  position: relative;
+  z-index: 10;
+}
+
+.carousel__control {
+  background: #f7f7f7;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin: -17px 0 0;
+  height: 34px;
+  text-decoration: none;
+  width: 47px;
+}
+
+.carousel__control.left {
+  left: 25px;
+}
+
+.carousel__control.left:before,
+.carousel__control.right:before {
+  border-bottom: 17px solid transparent;
+  border-right: 15px solid #f7f7f7;
+  border-top: 17px solid transparent;
+  content: '';
+  display: block;
+  height: 0;
+  left: -15px;
+  top: 0;
+  position: absolute;
+  width: 0;
+}
+
+.carousel__control.right {
+  right: 25px;
+}
+
+.carousel__control.right:before {
+  right: -15px;
+}

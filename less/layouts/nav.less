@@ -1,0 +1,40 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+
+nav {
+  width: 100%;
+
+  .list__item,
+  .list__item .list__item {
+    border-bottom: 1px solid #dae1eb;
+    margin: 1px 0 0;
+    position: relative;
+  }
+
+  .list__item:last-child {
+    border-bottom: 0;
+  }
+
+  .list__item_active > .list__link {
+    background: @link-color;
+    color: #FFF;
+  }
+
+  .list__link {
+    color: @body-color;
+    display: block;
+    font: @link-size/15px @font-body;
+    padding: 10px 0 7px 20px;
+    text-decoration: none;
+
+    &:hover {
+      background: #dce6f0;
+    }
+  }
+
+  .list__item .list .list__link {
+    padding: 7px 0 10px 32px;
+  }
+
+
+}

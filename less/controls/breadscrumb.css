@@ -18,24 +18,19 @@
 /* line-height */
 /* fonts */
 /* header */
-body {
-  background: #ffffff;
-  color: #5c7b98;
-  font: 14px/20px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
+.breadcrumb > li {
+  display: inline-block;
 }
-a {
+.breadcrumb > li + li:before {
+  padding: 0 6px 0 5px;
+  color: #ccc;
+  content: ">";
+}
+.breadcrumb a {
   color: #00b9fe;
-  font-size: 15px;
+  font-size: 14px;
+  text-decoration: underline;
 }
-h2 {
-  font: 25px/25px 'elektra_light_probold', Arial, Helvetica, sans-serif;
-}
-h3 {
-  font-size: 15px;
-}
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.breadcrumb > .active {
+  color: #5c7b98;
 }

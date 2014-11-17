@@ -18,24 +18,25 @@
 /* line-height */
 /* fonts */
 /* header */
-body {
-  background: #ffffff;
-  color: #5c7b98;
-  font: 14px/20px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
+.pagination {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-a {
+.pagination .list__item {
+  display: inline;
+  margin: 0 7px 0 0;
+}
+.pagination .list__link,
+.pagination .list__item_current {
   color: #00b9fe;
   font-size: 15px;
 }
-h2 {
-  font: 25px/25px 'elektra_light_probold', Arial, Helvetica, sans-serif;
+.pagination .list__item_current {
+  color: #5c7b98;
 }
-h3 {
-  font-size: 15px;
-}
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.pagination .list__link_prew,
+.pagination .list__link_next {
+  text-decoration: none;
 }
