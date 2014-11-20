@@ -3,5 +3,32 @@
 
 aside {
   float: left;
+  position: relative;
   width: 230px;
+
+  .contact__shop {
+  	background: #f4f6f9;
+	padding: 21px 14px 21px 24px;
+	position: relative;
+	top: auto;
+  }
+
+  .contact__link {
+  	font-style: normal;
+  	font-size: 14px;
+  	margin: 0 0 13px;
+  	padding: 0 0 0 21px;
+  	position: relative;
+  }
+
+  .contact__link + .contact__link {
+	margin: 0 0 0 20px;
+  }
+
+  .contact__link .icon {
+  	position: absolute;
+  	left: -3px;
+  	top: -4px;
+  }
+
 }

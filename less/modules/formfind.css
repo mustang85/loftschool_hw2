@@ -18,29 +18,44 @@
 /* line-height */
 /* fonts */
 /* header */
-aside {
-  float: left;
-  position: relative;
-  width: 230px;
-}
-aside .contact__shop {
-  background: #f4f6f9;
-  padding: 21px 14px 21px 24px;
-  position: relative;
-  top: auto;
-}
-aside .contact__link {
-  font-style: normal;
-  font-size: 14px;
-  margin: 0 0 13px;
-  padding: 0 0 0 21px;
-  position: relative;
-}
-aside .contact__link + .contact__link {
-  margin: 0 0 0 20px;
-}
-aside .contact__link .icon {
+.form__find {
+  margin: 0;
   position: absolute;
-  left: -3px;
-  top: -4px;
+  top: 36px;
+  left: 260px;
+}
+.form__find .form__group {
+  position: relative;
+  width: 339px;
+}
+.form__find .form__group input[type="text"] {
+  border: 1px solid #dbe5ef;
+  color: #5c7b98;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 9px 85px 9px 9px;
+  width: 254px;
+}
+.form__find .form__group input[type="text"]::-webkit-input-placeholder {
+  color: #dce6f0;
+}
+.form__find .form__group input[type="text"]:-moz-placeholder {
+  color: #dce6f0;
+}
+.form__find .form__group input[type="text"]::-moz-placeholder {
+  color: #dce6f0;
+}
+.form__find .form__group input[type="text"]:-ms-input-placeholder {
+  color: #dce6f0;
+}
+.form__find .form__group input[type="submit"] {
+  background: #00b9fe;
+  border: 0;
+  color: #FFF;
+  font-size: 17px;
+  top: 1px;
+  position: absolute;
+  right: -10px;
+  width: 80px;
+  height: 35px;
 }

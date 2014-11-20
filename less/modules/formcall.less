@@ -1,0 +1,123 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+
+
+.form__call {
+	background: #f4f6f9;
+	margin: 0 0 15px;
+	padding: 15px 13px;
+
+	.h2 {
+		margin: 0 0 20px;
+	}
+
+	.form__group {
+		margin: 0 0 15px;
+		position: relative;
+	}
+
+	.form__group:last-child {
+		margin: 0;
+	}
+
+	label {
+		line-height: 30px;
+	}
+
+	input[type="text"],
+	textarea {
+		border: 1px solid #dfe5ee;
+		color: #5c7b98;
+		font-size: 12px;
+		float: right;
+		line-height: 12px;
+		height: auto;
+		padding: 8px 5px 3px;
+		width: 118px;
+		.placeholder(#dae1eb);
+	}
+
+	textarea {
+		float: none;
+		padding: 10px 8px;
+		min-height: 45px;
+		width: 186px;
+	}
+
+	.btn {
+		background: #dae1eb;
+		border: 0;
+		color: #FFF;
+		font: @h3-size/@link-size @font-elektra_light_bold;
+		padding: 0;
+		&:hover {
+			background: #00b9fe;
+			color: #FFF;
+		}
+		.size(90px,35px);
+	}
+
+	.btn.btn__active {
+		background: #00b9fe;
+		color: #FFF;
+	}
+	
+	.btn__group {
+		position: absolute;
+		.size(48px, 24px);
+	}
+
+	.btn__group_date {
+		top: 0;
+		left: 95px;
+	}	
+
+	.btn__group_month {
+		top: 0;
+		left: 156px;
+	}
+	
+	.dropdown__toggle {
+		background-color: #FFF;
+		border: 1px solid #d9e1eb;
+		color: #dae1eb;
+		font-size: 11px;
+		text-align: left;
+		position: relative;
+		.size(48px, 24px);
+		
+		.icon_caret {
+			background-position: -17px -128px;
+			background-color: #00b9fe;
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 0;
+			z-index: 10;
+			.size(23px, 23px);	
+		}
+	}
+
+	.dropdown__menu {
+		background: #FFF;
+		border: 1px solid #dae1eb;
+		border-top: 0;
+		position: relative;
+		z-index: 100;
+
+		li:first-child {
+			padding: 5px 0 0;
+		}
+
+		a {
+			display: block;
+			font-size: 12px;
+			height: 20px;
+			line-height: 20px;
+			color: #5c7b98;
+			padding: 0 4px;
+			text-decoration: none;
+		}
+	}
+
+}

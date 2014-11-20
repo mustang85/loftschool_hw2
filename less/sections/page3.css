@@ -80,3 +80,106 @@
   width: 23px;
   height: 23px;
 }
+.page3 .wrap__head {
+  border-top: 44px solid #44626e;
+}
+.page3 .content {
+  margin: 0 0 70px;
+}
+.page3 .share {
+  position: absolute;
+  top: -35px;
+}
+.page3 .share__link {
+  width: 27px;
+  height: 25px;
+}
+.page3 .share__link.vk {
+  background-position: -72px -126px;
+}
+.page3 .share__link.facebook {
+  background-position: -104px -126px;
+}
+.page3 .share__link.twitter {
+  background-position: -135px -126px;
+}
+.page3 .contact__shop {
+  right: auto;
+  left: 0;
+}
+.page3 .contact__link {
+  color: #FFF;
+  position: absolute;
+}
+.page3 .contact__link:first-child {
+  font-size: 13px;
+  left: 377px;
+  right: auto;
+  top: -69px;
+  width: 360px;
+}
+.page3 .contact__link:first-child .icon__address {
+  top: 5px;
+}
+.page3 .contact__link:last-child {
+  font-size: 25px;
+  top: -58px;
+  left: 810px;
+  font-style: normal;
+  width: 210px;
+}
+.page3 header .panel {
+  position: absolute;
+  top: 35px;
+  left: 606px;
+  width: 400px;
+}
+.page3 header .panel .list__item {
+  float: left;
+  line-height: 42px;
+  height: 42px;
+  margin: 0 0 0 21px;
+}
+.page3 header .panel .list__item:last-child {
+  background: #FFF;
+  border: 1px solid #dce6f0;
+  border-bottom: 0;
+  padding: 0 18px 0 10px;
+}
+.page3 header .panel .list__link {
+  font-size: 13px;
+  line-height: 13px;
+}
+.page3 header .panel .list__link:hover {
+  color: #613993;
+}
+.page3 header .panel .list__item:last-child .list__link:hover {
+  color: #5c7b98;
+}
+.page3 .wish__list {
+  border: 1px solid #dce6f0;
+  width: 244px;
+  position: absolute;
+  right: 0;
+}
+.page3 .wish__list .list__item {
+  border-top: 1px solid #f1f5f9;
+  padding: 12px 10px;
+}
+.page3 .wish__list .list__item:first-child {
+  border-top: 0;
+}
+.page3 .wish__list .list__item:hover {
+  background: #f8fafb;
+}
+.page3 .wish__list .list__photo__link,
+.page3 .wish__list .list__title {
+  display: table-cell;
+  vertical-align: top;
+}
+.page3 .wish__list .list__photo__link {
+  padding: 0 12px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 60px;
+}
