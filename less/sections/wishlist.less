@@ -1,0 +1,54 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+@import '../content/icons.less';
+
+
+.wish__list {
+	background: #FFF;
+	border: 1px solid #dce6f0;
+	width: 244px;
+	position: absolute;
+	top: 77px;
+	right: -1px;
+
+	.list__item {
+		border-top: 1px solid #f1f5f9;
+		padding: 12px 10px;
+	}
+
+	.list__item:first-child {
+		border-top: 0;
+	}
+
+	.list__item:hover {
+		background: #f8fafb;
+	}
+
+	.list__photo__link,
+	.list__title {
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	.list__photo__link {
+		padding: 0 12px 0 0;
+		text-align: center;
+		vertical-align: middle;
+		width: 60px;
+
+		img {
+			vertical-align: middle;
+		}
+	}
+
+	.list__title {
+		font-weight: normal;
+		vertical-align: middle;
+	}
+		
+	.list__title__link {
+		font-size: 13px;
+		line-height: 20px;
+	}
+
+}

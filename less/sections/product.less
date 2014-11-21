@@ -1,0 +1,124 @@
+@import '../../lesshat/build/lesshat.less';
+@import '../global_vars/vars.less';
+@import '../content/icons.less';
+
+.product {
+	clear: both;
+	margin: 0 0 25px;
+	overflow: hidden;
+
+	.list__item {
+		width: 770px;
+	}
+
+	.list__photo {
+		float: left;
+		width: 300px;
+	}
+
+	.list__title,
+	.dl {
+		margin: 0 0 35px 311px;
+	}
+
+	.list__title {
+		color: #00b9fe;
+		font-size: 25px;
+		line-height: 25px;
+	}
+	
+	.dt,
+	.dd {
+		height: 28px;
+		line-height: 28px;
+		margin: 0;
+	}
+
+	.dt {
+		float: left;
+		padding: 0 0 0 10px;
+		width: 245px;
+	}
+
+	
+	.dl__item:nth-child(even) {
+		background: #eef2f4;
+	}
+
+	.product__list {
+		margin: 24px 0 0;
+		padding: 0 29px;
+		overflow: hidden;
+		position: relative;
+		width: 242px;
+
+		.product__link {
+			float: left;
+			margin: 0 5px 0 0;
+			.size(75px,75px);
+		}
+
+		.product__wrap {
+			width: 100000px;
+		}
+	}
+
+	.product__control {
+		background: #d0e4f3;
+		color: #5c7b98;
+		cursor: pointer;
+		font: 17px/35px 'elektra_light_probold', Arial, Helvetica, sans-serif;
+		margin: -17px 0 0;
+		position: absolute;
+		text-decoration: none;
+		top: 50%;
+		text-align: center;
+		.size(15px,34px);
+	}
+
+	.product__control.left {
+		left: 8px;
+	}
+
+	.product__control.right {
+		right: 14px;
+	}
+
+
+	.product__list .left:before, 
+	.product__list .right:before {
+		border-bottom: 17px solid transparent;
+		border-right: 8px solid #d0e4f3;
+		border-top: 17px solid transparent;
+		content: '';
+		display: block;
+		height: 0;
+		left: -8px;
+		top: 0;
+		position: absolute;
+		width: 0;
+	}
+
+	.product__list .right:before {
+		border-right: 0;
+		border-left: 8px solid #d0e4f3;
+		left: auto;
+		right: -8px;
+	}
+
+	.product__control {
+		&:hover {
+			background: #00b9fe;
+		}
+	}
+
+	.icon__left,
+	.icon__right {
+		margin: 0;
+		background-position: -60px -125px;
+	}
+
+	.icon__right {
+		background-position: -45px -138px;
+	}
+}
