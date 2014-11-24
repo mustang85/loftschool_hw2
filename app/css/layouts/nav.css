@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'elektra_light_proregular';
+  src: url('../fonts/elektra_light_pro-webfont.eot');
+  src: url('../fonts/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/elektra_light_pro-webfont.woff2') format('woff2'), url('../fonts/elektra_light_pro-webfont.woff') format('woff'), url('../fonts/elektra_light_pro-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_light_probold';
+  src: url('../fonts/font-webfont.eot');
+  src: url('../fonts/font-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font-webfont.woff2') format('woff2'), url('../fonts/font-webfont.woff') format('woff'), url('../fonts/font-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* backgraound */
+/* colors */
+/* size */
+/* line-height */
+/* fonts */
+/* header */
+nav {
+  width: 100%;
+}
+nav .list__item,
+nav .list__item .list__item {
+  border-bottom: 1px solid #dae1eb;
+  margin: 1px 0 0;
+  position: relative;
+}
+nav .list__item:last-child {
+  border-bottom: 0;
+}
+nav .list__item_active > .list__link {
+  background: #00b9fe;
+  color: #FFF;
+}
+nav .list__link {
+  color: #5c7b98;
+  display: block;
+  font: 15px/15px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
+  padding: 10px 0 7px 20px;
+  text-decoration: none;
+}
+nav .list__link:hover {
+  background: #dce6f0;
+}
+nav .list__item .list .list__link {
+  padding: 7px 0 10px 32px;
+}

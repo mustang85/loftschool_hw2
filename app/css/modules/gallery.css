@@ -1,0 +1,15 @@
+.gallery {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 20px;
+}
+.gallery .list {
+  margin: 0 0 0 -10px;
+}
+.gallery .list__item {
+  float: left;
+  margin: 0 0 10px 10px;
+}
+.gallery .list__item img {
+  vertical-align: bottom;
+}

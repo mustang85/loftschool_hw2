@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'elektra_light_proregular';
+  src: url('../fonts/elektra_light_pro-webfont.eot');
+  src: url('../fonts/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/elektra_light_pro-webfont.woff2') format('woff2'), url('../fonts/elektra_light_pro-webfont.woff') format('woff'), url('../fonts/elektra_light_pro-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_light_probold';
+  src: url('../fonts/font-webfont.eot');
+  src: url('../fonts/font-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font-webfont.woff2') format('woff2'), url('../fonts/font-webfont.woff') format('woff'), url('../fonts/font-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* backgraound */
+/* colors */
+/* size */
+/* line-height */
+/* fonts */
+/* header */
+.icon {
+  background: transparent url("../img/sprite.png") -20px -20px no-repeat;
+  display: inline-block;
+  font: 0px/0 a;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+  position: relative;
+  vertical-align: baseline;
+  width: 10px;
+  height: 10px;
+}
+.icon_caret {
+  background-position: 0 -136px;
+  position: absolute;
+  margin: 2px 0 0 -12px;
+  width: 7px;
+  height: 9px;
+}
+.download__link {
+  width: 90px;
+  height: 32px;
+}
+.download__link.appstore {
+  background-position: 0 0;
+}
+.download__link.google_play {
+  background-position: -100px 0;
+}
+.share__link {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  width: 43px;
+  height: 44px;
+}
+.share__link.vk {
+  background-position: 0 -32px;
+}
+.share__link.facebook {
+  background-position: -54px -32px;
+}
+.share__link.twitter {
+  background-position: -108px -32px;
+}
+.icon__phone {
+  background-position: -128px -82px;
+  margin: 0 5px 0 0;
+  width: 22px;
+  height: 28px;
+}
+.icon__address {
+  background-position: -88px -82px;
+  margin: 0 5px 0 0;
+  width: 22px;
+  height: 27px;
+}
+.icon__basket {
+  background-position: -165px -88px;
+  margin: 0 17px 0 0;
+  top: 8px;
+  width: 23px;
+  height: 23px;
+}
+.wish__list {
+  background: #FFF;
+  border: 1px solid #dce6f0;
+  width: 244px;
+  position: absolute;
+  top: 77px;
+  right: -1px;
+}
+.wish__list .list__item {
+  border-top: 1px solid #f1f5f9;
+  padding: 12px 10px;
+}
+.wish__list .list__item:first-child {
+  border-top: 0;
+}
+.wish__list .list__item:hover {
+  background: #f8fafb;
+}
+.wish__list .list__photo__link,
+.wish__list .list__title {
+  display: table-cell;
+  vertical-align: top;
+}
+.wish__list .list__photo__link {
+  padding: 0 12px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 60px;
+}
+.wish__list .list__photo__link img {
+  vertical-align: middle;
+}
+.wish__list .list__title {
+  font-weight: normal;
+  vertical-align: middle;
+}
+.wish__list .list__title__link {
+  font-size: 13px;
+  line-height: 20px;
+}
