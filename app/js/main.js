@@ -1,26 +1,35 @@
 $(function() {
 
-	var scrollStep = $('#product__list img:eq(0)').outerWidth(true);
+	function returnToBeginn(next) {
+		$('.product__wrap').stop(true)
+						   .animate({'left': 0}, 1500);
+		next.data().x = 0;
+	}
 
-	$('.right').on('click', function () {
+	var scrollStep = $('.product__list .product__link:eq(0)').outerWidth(true);
+
+	$('.right').on('click', function (e) {
+		e.preventDefault();
+
 		var next = $(this),
 			prew = $('.left'),
 			nextScroll = null,
 			countClick = 0,
 			visibleImageViewing = 3;
 
-		if (next.data().x == undefined || next.data().x === 0) {
+		if (next.data().x === undefined || next.data().x === 0) {
 			
-			$('#product__list').stop(true).animate({"left": -scrollStep + 'px'}, 'slow');
+			$('.product__wrap').stop(true)
+								.animate({"left": -scrollStep + 'px'}, 'slow');
 
 			next.data({x: -scrollStep, countClick: ++visibleImageViewing});
 			prew.data({x: -scrollStep, countClick: ++visibleImageViewing});
 
 		} else {
 
-			if ($('#product__list img').length == next.data().countClick) {
-				$('#product__list').stop(true).animate({'left': 0}, 1500);
-				next.data().x = 0;
+			if ( $('.product__list img').length == next.data().countClick ) {
+
+				returnToBeginn(next);
 				return;
 			}
 
@@ -28,21 +37,22 @@ $(function() {
 			prew.data({x: prew.data().x - scrollStep, countClick: ++prew.data().countClick});
 
 			nextScroll = next.data().x;
-			$('#product__list').stop(true).animate({"left": nextScroll + 'px'}, 'slow');
+			$('.product__wrap').stop(true)
+							   .animate({"left": nextScroll + 'px'}, 'slow');
 		}
 		
 	});
 
-	$('.left').on('click', function () {
+	$('.left').on('click', function (e) {
+		e.preventDefault();
 
-		var wrapSlide = $('#product__list'),
+		var wrapSlide = $('.product__wrap'),
 			nextSlide = $('.right'),
 			prewSlide = $(this)
 			offsetPrewSlide = prewSlide.data().x;
 
 		if ( wrapSlide.css('left') == 0 || offsetPrewSlide >= 0) {
-			wrapSlide.stop(true).animate({"left": 0 + 'px'}, 'slow');
-			nextSlide.data().x = 0;
+			returnToBeginn(nextSlide);
 		} else {
 
 			prewSlide.data().x = offsetPrewSlide + scrollStep;

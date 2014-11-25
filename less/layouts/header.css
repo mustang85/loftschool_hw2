@@ -19,7 +19,7 @@
 /* fonts */
 /* header */
 .wrap__head {
-  background: #d9e4ef url('../../app/img/bg_head.jpg') center 0 no-repeat;
+  background: #d9e4ef url('../img/bg_head.jpg') center 0 no-repeat;
   margin: 0 0 43px;
   width: 100%;
   height: 120px;

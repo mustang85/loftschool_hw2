@@ -684,7 +684,7 @@ ul {
 }
 
 .wrap__head {
-  background: #d9e4ef url("../../app/img/bg_head.jpg") center 0 no-repeat;
+  background: #d9e4ef url("../img/bg_head.jpg") center 0 no-repeat;
   margin: 0 0 43px;
   width: 100%;
   height: 120px;
@@ -1287,9 +1287,12 @@ footer .download {
   background: #eef2f4;
 }
 
+.product .slider {
+  position: relative;
+}
+
 .product .product__list {
-  margin: 24px 0 0;
-  padding: 0 29px;
+  margin: 24px 29px 0;
   overflow: hidden;
   position: relative;
   width: 242px;
@@ -1297,12 +1300,14 @@ footer .download {
 
 .product .product__list .product__link {
   float: left;
-  margin: 0 5px 0 0;
+  margin: 0 6px 0 0;
+  position: relative;
   width: 75px;
   height: 75px;
 }
 
 .product .product__list .product__wrap {
+  position: relative;
   width: 100000px;
 }
 
@@ -1325,7 +1330,7 @@ footer .download {
 }
 
 .product .product__control.right {
-  right: 14px;
+  right: 8px;
 }
 
 .product .product__list .left:before,

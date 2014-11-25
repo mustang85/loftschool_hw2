@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 	prefix = require('gulp-autoprefixer'),
 	livereload = require('gulp-livereload'),
 	connect = require('gulp-connect'),
+	less = require('gulp-less'),
 	minifyCSS = require('gulp-minify-css');
 
 // server connect
@@ -16,6 +17,12 @@ gulp.task('connect', function () {
 	});
 });
 
+// less
+gulp.task('less', function () {
+  gulp.src('less/**/*.less')
+    .pipe(less())
+    .pipe(gulp.dest('less'));
+});
 
 // css
 gulp.task('css', function () {
@@ -37,10 +44,11 @@ gulp.task('html', function () {
 
 // watch
 gulp.task('watch', function () {
+	gulp.watch('less/*.less', ['less']);
 	gulp.watch('less/*.css', ['css']);
 	gulp.watch('app/*.html', ['html']);
 });
 
 // default
-gulp.task('default', ['connect', 'html', 'css', 'watch']);
+gulp.task('default', ['connect', 'less', 'html', 'css', 'watch']);
 
