@@ -6,8 +6,7 @@ var gulp = require('gulp'),
 	prefix = require('gulp-autoprefixer'),
 	livereload = require('gulp-livereload'),
 	connect = require('gulp-connect'),
-	minifyCSS = require('gulp-minify-css'),
-	less = require('gulp-less');
+	minifyCSS = require('gulp-minify-css');
 
 // server connect
 gulp.task('connect', function () {
@@ -17,17 +16,10 @@ gulp.task('connect', function () {
 	});
 });
 
-// less
-gulp.task('less', function () {
-  gulp.src('less/**/*.less')
-    .pipe(less())
-    .pipe(gulp.dest('app/css'))
-    // .pipe(connect.reload());
-});
 
 // css
 gulp.task('css', function () {
-  gulp.src('app/css/*.css')
+  gulp.src('less/*.css')
     .pipe(concatCSS("main.css"))
     .pipe(prefix('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('app/css/'))
@@ -47,9 +39,8 @@ gulp.task('html', function () {
 gulp.task('watch', function () {
 	gulp.watch('less/*.css', ['css']);
 	gulp.watch('app/*.html', ['html']);
-	gulp.watch('less/**/*.less', ['less']);
 });
 
 // default
-gulp.task('default', ['connect', 'html', 'css', 'less', 'watch']);
+gulp.task('default', ['connect', 'html', 'css', 'watch']);
 

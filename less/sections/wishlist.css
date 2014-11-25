@@ -87,6 +87,7 @@
   position: absolute;
   top: 77px;
   right: -1px;
+  z-index: 100;
 }
 .wish__list .list__item {
   border-top: 1px solid #f1f5f9;

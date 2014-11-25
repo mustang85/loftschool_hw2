@@ -998,46 +998,6 @@ footer .download {
 .page3 header .panel .list__item:last-child .list__link:hover {
   color: #5c7b98;
 }
-.page3 .wish__list {
-  background: #FFF;
-  border: 1px solid #dce6f0;
-  width: 244px;
-  position: absolute;
-  top: 77px;
-  right: -1px;
-}
-.page3 .wish__list .list__item {
-  border-top: 1px solid #f1f5f9;
-  padding: 12px 10px;
-}
-.page3 .wish__list .list__item:first-child {
-  border-top: 0;
-}
-.page3 .wish__list .list__item:hover {
-  background: #f8fafb;
-}
-.page3 .wish__list .list__photo__link,
-.page3 .wish__list .list__title {
-  display: table-cell;
-  vertical-align: top;
-}
-.page3 .wish__list .list__photo__link {
-  padding: 0 12px 0 0;
-  text-align: center;
-  vertical-align: middle;
-  width: 60px;
-}
-.page3 .wish__list .list__photo__link img {
-  vertical-align: middle;
-}
-.page3 .wish__list .list__title {
-  font-weight: normal;
-  vertical-align: middle;
-}
-.page3 .wish__list .list__title__link {
-  font-size: 13px;
-  line-height: 20px;
-}
 .page3 .intro {
   overflow: hidden;
 }
@@ -1172,6 +1132,7 @@ footer .download {
   position: absolute;
   top: 77px;
   right: -1px;
+  z-index: 100;
 }
 .wish__list .list__item {
   border-top: 1px solid #f1f5f9;
@@ -1204,6 +1165,98 @@ footer .download {
 .wish__list .list__title__link {
   font-size: 13px;
   line-height: 20px;
+}
+.menu__top {
+  -webkit-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.15);
+  background: #f7f7f7;
+  border-bottom: 1px solid #e3e3e3;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  bottom: -20px;
+  min-width: 1000px;
+  text-align: center;
+}
+.menu__top a {
+  color: #5c7b98;
+  display: inline-block;
+  padding: 0 18px;
+  text-decoration: none;
+  position: relative;
+}
+.menu__top a:after {
+  background: url('../img/sprite.png') -159px -40px no-repeat;
+  display: block;
+  content: '';
+  position: absolute;
+  right: -13px;
+  top: 0;
+  z-index: 20;
+  width: 15px;
+  height: 40px;
+}
+.menu__top a:last-child:after,
+.menu__top a:hover:after,
+.menu__top a:before {
+  background-image: none;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 13px solid #dce6f0;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  top: 0;
+  right: -13px;
+}
+.menu__top a:last-child:after {
+  background-image: none;
+  border-left-color: #f7f7f7;
+  right: -13px;
+}
+.menu__top a:hover:last-child:after {
+  border-left-color: #dce6f0;
+}
+.menu__top a:first-child:before,
+.menu__top a:before {
+  border-top: 20px solid transparent;
+  border-left: 13px solid #f7f7f7;
+  border-bottom: 20px solid transparent;
+  right: auto;
+  left: -1px;
+}
+.menu__top a:first-child:before {
+  background: url("../img/sprite.png") -173px -113px no-repeat transparent;
+  border: 0;
+  height: 41px;
+  left: -3px;
+  top: 2px;
+  width: 13px;
+}
+.menu__top a:hover:first-child:before {
+  background-image: none;
+  border-top: 20px solid transparent;
+  border-left: 13px solid #dce6f0;
+  border-bottom: 20px solid transparent;
+  height: 0;
+  width: 0;
+}
+.menu__top a:hover {
+  background: #dce6f0;
+}
+.menu__top a:hover:before {
+  display: block;
+}
+.menu__top a.active,
+.menu__top a.active:before {
+  background-color: #00b9fe;
+  color: #FFF;
+}
+.menu__top a.active:after {
+  border-left-color: #00b9fe;
 }
 .carousel {
   overflow: hidden;
