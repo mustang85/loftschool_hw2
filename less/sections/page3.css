@@ -102,6 +102,7 @@
 }
 .page3 .content {
   margin: 0 0 70px;
+  position: relative;
 }
 .page3 .contact__shop {
   right: auto;
@@ -134,26 +135,40 @@
   left: 606px;
   width: 400px;
 }
-.page3 header .panel .list__item {
+.page3 .panel .list__item {
   float: left;
   line-height: 42px;
   height: 42px;
   margin: 0 0 0 21px;
 }
-.page3 header .panel .list__item:last-child {
-  background: #FFF;
-  border: 1px solid #dce6f0;
+.page3 .panel .list__item_basket {
+  border: 1px solid transparent;
   border-bottom: 0;
   padding: 0 18px 0 10px;
 }
-.page3 header .panel .list__link {
+.page3 .panel .list__item_basket .icon {
+  visibility: hidden;
+}
+.page3 .panel .list__item_basket:hover,
+.page3 .panel .list__item_basket.active {
+  background: #FFF;
+  border: 1px solid #dce6f0;
+}
+.page3 .panel .list__item_basket:hover .icon,
+.page3 .panel .list__item_basket.active .icon {
+  visibility: visible;
+}
+.page3 .panel .list__link {
   font-size: 13px;
   line-height: 13px;
 }
-.page3 header .panel .list__link:hover {
+.page3 .panel .list__link:hover {
   color: #613993;
 }
-.page3 header .panel .list__item:last-child .list__link:hover {
+.page3 .panel .list__link:focus {
+  outline: none;
+}
+.page3 .panel .list__item:last-child .list__link:hover {
   color: #5c7b98;
 }
 .page3 .intro {
@@ -177,9 +192,14 @@
 .but__up {
   background-position: 0 -83px;
   color: #FFF;
+  cursor: pointer;
   font: 18px Arial, sans-serif;
   line-height: 39px;
   text-align: center;
+  right: 0;
+  position: absolute;
+  bottom: -50px;
+  top: auto;
   width: 77px;
   height: 39px;
 }

@@ -83,10 +83,11 @@
 .wish__list {
   background: #FFF;
   border: 1px solid #dce6f0;
-  width: 244px;
+  display: none;
   position: absolute;
-  top: 77px;
   right: -1px;
+  top: 77px;
+  width: 244px;
   z-index: 100;
 }
 .wish__list .list__item {

@@ -31,6 +31,7 @@
 
 	.content {
 		margin: 0 0 70px;	
+		position: relative;
 	}
 
 
@@ -71,34 +72,56 @@
 			top: 35px;
 			left: 606px;
 			width: 400px;
-
-			.list__item {
-				float: left;
-				line-height: 42px;
-				height: 42px;
-				margin: 0 0 0 21px;
-			}
-
-			.list__item:last-child {
-				background: #FFF;
-				border: 1px solid #dce6f0;
-				border-bottom: 0;
-				padding: 0 18px 0 10px;
-			}
-
-			.list__link {
-				font-size: 13px;
-				line-height: 13px;
-				&:hover {
-					color: #613993;
-				}
-			}
-
-			.list__item:last-child .list__link:hover {
-				color: #5c7b98;
-			}
 		}
 	}
+
+	.panel {
+		.list__item {
+			float: left;
+			line-height: 42px;
+			height: 42px;
+			margin: 0 0 0 21px;
+		}
+
+		.list__item_basket {
+			border: 1px solid transparent;
+			border-bottom: 0;
+			padding: 0 18px 0 10px;
+
+			.icon {
+				visibility: hidden;
+			}
+		}
+
+		.list__item_basket:hover,
+		.list__item_basket.active {
+			background: #FFF;
+			border: 1px solid #dce6f0;
+
+			.icon {
+				visibility: visible;
+			}
+		}
+
+		.list__link {
+			font-size: 13px;
+			line-height: 13px;
+
+			&:hover {
+				color: #613993;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.list__item:last-child .list__link:hover {
+			color: #5c7b98;
+		}
+	}
+
+	
 
 	.intro {
 		overflow: hidden;
@@ -129,8 +152,15 @@
 .but__up {
 	background-position: 0 -83px;
 	color: #FFF;
+	cursor: pointer;
 	font: 18px Arial, sans-serif;
 	line-height: 39px;
 	text-align: center;
+	height: 39px;
+	width: 77px;
+	right: 0;
+	position: absolute;
+	bottom: -50px;
+	top: auto;
 	.size(77px,39px);
 }

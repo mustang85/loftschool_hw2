@@ -1,5 +1,54 @@
 $(function() {
 
+	/* вывод сеткой на главной */
+	$('#dropdownMenu1').on('click',function (e) {
+		var dropdownButton =  $('#dropdownMenu1'),
+			dropdownTextContainer = dropdownButton.find('.dropdown__text')
+			dropdownTextDefault = dropdownTextContainer.text(),
+			findList = $('.catalog .list'),
+			dropdownMenu = dropdownButton.next('.dropdown-menu');
+
+		console.log(dropdownTextDefault);
+
+		// допилю позже
+			// dropdownMenu.toggle();
+
+		// if (dropdownMenu.is(':hidden')) {
+		// 	dropdownMenu.fadeIn('fast');
+		// 	dropdownMenu.find()
+		// }
+
+		if ( findList.hasClass('catalog__grid') ) {
+			findList.removeClass('catalog__grid');
+			dropdownTextContainer.text('сеткой');
+		} else {
+			findList.addClass('catalog__grid');	
+			dropdownTextContainer.text('линейкой');
+		}
+
+	});
+	
+
+	/* тук тук по вкладке корзина */
+	$('.list__item_basket').on('click',function (e) {
+		e.preventDefault();
+
+		$('.list__item_basket').toggleClass('active');
+
+		if ( $('.wish__list').is(':hidden') ) {
+			$('.wish__list').fadeIn(500);
+		} else {
+			$('.wish__list').fadeOut(500);
+		}
+	});
+
+	/* перемотка на верх */
+	$('.icon.but__up').on('click', function() {
+		$('body,document').animate({'scrollTop': 0}, 1500);	
+	})
+
+	/* слайдер на странице номер 3, да знаю, 
+	нужно все перенести в модуль и оптимизировать */
 	function returnToBeginn(next) {
 		$('.product__wrap').stop(true)
 						   .animate({'left': 0}, 1500);

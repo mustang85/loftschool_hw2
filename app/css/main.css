@@ -970,6 +970,18 @@ footer .download {
   width: 133px;
 }
 
+.dl,
+.dt,
+.dd {
+  display: inline;
+  margin: 0;
+}
+
+.dl {
+  display: block;
+  padding: 0 25px 0 0;
+}
+
 .catalog {
   margin: 0 0 39px;
 }
@@ -1017,20 +1029,6 @@ footer .download {
   line-height: 20px;
 }
 
-.catalog .dl {
-  clear: both;
-  margin: 93px 0 0;
-}
-
-.catalog .dt,
-.catalog .dd {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 14px;
-  margin: 7px 0 0;
-  width: 100px;
-}
-
 .catalog__title {
   color: #5c7b98;
   font-size: 25px;
@@ -1067,16 +1065,14 @@ footer .download {
 }
 
 .catalog__grid .list__item {
-  float: left;
+  border: 1px solid #dae1eb;
+  display: inline-block;
   height: auto;
   padding: 10px;
-  margin: 0 0 0 25px;
+  margin: 0 7px 20px;
   position: relative;
+  vertical-align: top;
   width: 208px;
-}
-
-.catalog__grid .list__item:first-child {
-  margin: 0;
 }
 
 .catalog__grid .list__photo {
@@ -1102,6 +1098,22 @@ footer .download {
 .catalog__grid .list__title__link {
   display: table-cell;
   vertical-align: middle;
+}
+
+.catalog__grid .dl {
+  clear: both;
+  display: block;
+  padding: 0;
+  margin: 93px 0 0;
+}
+
+.catalog__grid .dt,
+.catalog__grid .dd {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 7px 0 0;
+  width: 100px;
 }
 
 .intro__title {
@@ -1145,6 +1157,7 @@ footer .download {
 
 .page3 .content {
   margin: 0 0 70px;
+  position: relative;
 }
 
 .page3 .contact__shop {
@@ -1184,30 +1197,48 @@ footer .download {
   width: 400px;
 }
 
-.page3 header .panel .list__item {
+.page3 .panel .list__item {
   float: left;
   line-height: 42px;
   height: 42px;
   margin: 0 0 0 21px;
 }
 
-.page3 header .panel .list__item:last-child {
-  background: #FFF;
-  border: 1px solid #dce6f0;
+.page3 .panel .list__item_basket {
+  border: 1px solid transparent;
   border-bottom: 0;
   padding: 0 18px 0 10px;
 }
 
-.page3 header .panel .list__link {
+.page3 .panel .list__item_basket .icon {
+  visibility: hidden;
+}
+
+.page3 .panel .list__item_basket:hover,
+.page3 .panel .list__item_basket.active {
+  background: #FFF;
+  border: 1px solid #dce6f0;
+}
+
+.page3 .panel .list__item_basket:hover .icon,
+.page3 .panel .list__item_basket.active .icon {
+  visibility: visible;
+}
+
+.page3 .panel .list__link {
   font-size: 13px;
   line-height: 13px;
 }
 
-.page3 header .panel .list__link:hover {
+.page3 .panel .list__link:hover {
   color: #613993;
 }
 
-.page3 header .panel .list__item:last-child .list__link:hover {
+.page3 .panel .list__link:focus {
+  outline: none;
+}
+
+.page3 .panel .list__item:last-child .list__link:hover {
   color: #5c7b98;
 }
 
@@ -1237,9 +1268,14 @@ footer .download {
 .but__up {
   background-position: 0 -83px;
   color: #FFF;
+  cursor: pointer;
   font: 18px Arial, sans-serif;
   line-height: 39px;
   text-align: center;
+  right: 0;
+  position: absolute;
+  bottom: -50px;
+  top: auto;
   width: 77px;
   height: 39px;
 }
@@ -1333,8 +1369,8 @@ footer .download {
   right: 8px;
 }
 
-.product .product__list .left:before,
-.product .product__list .right:before {
+.product .slider .left:before,
+.product .slider .right:after {
   border-bottom: 17px solid transparent;
   border-right: 8px solid #d0e4f3;
   border-top: 17px solid transparent;
@@ -1347,7 +1383,7 @@ footer .download {
   width: 0;
 }
 
-.product .product__list .right:before {
+.product .slider .right:after {
   border-right: 0;
   border-left: 8px solid #d0e4f3;
   left: auto;
@@ -1356,6 +1392,14 @@ footer .download {
 
 .product .product__control:hover {
   background: #00b9fe;
+}
+
+.product .product__control:hover:before {
+  border-right: 8px solid #00b9fe;
+}
+
+.product .product__control:hover:after {
+  border-left: 8px solid #00b9fe;
 }
 
 .product .icon__left,
@@ -1371,10 +1415,11 @@ footer .download {
 .wish__list {
   background: #FFF;
   border: 1px solid #dce6f0;
-  width: 244px;
+  display: none;
   position: absolute;
-  top: 77px;
   right: -1px;
+  top: 77px;
+  width: 244px;
   z-index: 100;
 }
 
@@ -1518,6 +1563,12 @@ footer .download {
 }
 
 .menu__top a.active:after {
+  background-image: none;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 13px solid #dce6f0;
+  border-bottom: 20px solid transparent;
   border-left-color: #00b9fe;
 }
 

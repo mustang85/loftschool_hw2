@@ -18,6 +18,16 @@
 /* line-height */
 /* fonts */
 /* header */
+.dl,
+.dt,
+.dd {
+  display: inline;
+  margin: 0;
+}
+.dl {
+  display: block;
+  padding: 0 25px 0 0;
+}
 .catalog {
   margin: 0 0 39px;
 }
@@ -59,18 +69,6 @@
   font-size: 14px;
   line-height: 20px;
 }
-.catalog .dl {
-  clear: both;
-  margin: 93px 0 0;
-}
-.catalog .dt,
-.catalog .dd {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 14px;
-  margin: 7px 0 0;
-  width: 100px;
-}
 .catalog__title {
   color: #5c7b98;
   font-size: 25px;
@@ -102,15 +100,14 @@
   display: table;
 }
 .catalog__grid .list__item {
-  float: left;
+  border: 1px solid #dae1eb;
+  display: inline-block;
   height: auto;
   padding: 10px;
-  margin: 0 0 0 25px;
+  margin: 0 7px 20px;
   position: relative;
+  vertical-align: top;
   width: 208px;
-}
-.catalog__grid .list__item:first-child {
-  margin: 0;
 }
 .catalog__grid .list__photo {
   height: 104px;
@@ -132,4 +129,18 @@
 .catalog__grid .list__title__link {
   display: table-cell;
   vertical-align: middle;
+}
+.catalog__grid .dl {
+  clear: both;
+  display: block;
+  padding: 0;
+  margin: 93px 0 0;
+}
+.catalog__grid .dt,
+.catalog__grid .dd {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 7px 0 0;
+  width: 100px;
 }

@@ -154,8 +154,8 @@
 .product .product__control.right {
   right: 8px;
 }
-.product .product__list .left:before,
-.product .product__list .right:before {
+.product .slider .left:before,
+.product .slider .right:after {
   border-bottom: 17px solid transparent;
   border-right: 8px solid #d0e4f3;
   border-top: 17px solid transparent;
@@ -167,7 +167,7 @@
   position: absolute;
   width: 0;
 }
-.product .product__list .right:before {
+.product .slider .right:after {
   border-right: 0;
   border-left: 8px solid #d0e4f3;
   left: auto;
@@ -175,6 +175,12 @@
 }
 .product .product__control:hover {
   background: #00b9fe;
+}
+.product .product__control:hover:before {
+  border-right: 8px solid #00b9fe;
+}
+.product .product__control:hover:after {
+  border-left: 8px solid #00b9fe;
 }
 .product .icon__left,
 .product .icon__right {

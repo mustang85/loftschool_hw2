@@ -90,8 +90,8 @@
 	}
 
 
-	.product__list .left:before, 
-	.product__list .right:before {
+	.slider .left:before, 
+	.slider .right:after {
 		border-bottom: 17px solid transparent;
 		border-right: 8px solid #d0e4f3;
 		border-top: 17px solid transparent;
@@ -104,7 +104,7 @@
 		width: 0;
 	}
 
-	.product__list .right:before {
+	.slider .right:after {
 		border-right: 0;
 		border-left: 8px solid #d0e4f3;
 		left: auto;
@@ -112,9 +112,19 @@
 	}
 
 	.product__control {
+		
 		&:hover {
 			background: #00b9fe;
 		}
+
+		&:hover:before {
+			border-right: 8px solid #00b9fe;
+		}
+		
+		&:hover:after {
+			border-left: 8px solid #00b9fe;
+		}
+
 	}
 
 	.icon__left,
