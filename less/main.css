@@ -606,66 +606,76 @@ header {
   text-decoration: underline;
 }
 .main {
-  margin: 0 auto;
+  margin: 0 auto 70px;
+  position: relative;
   width: 1000px;
 }
-aside {
+.aside {
   float: left;
   position: relative;
   width: 230px;
 }
-aside .contact__shop {
+.aside .contact__shop {
   background: #f4f6f9;
   padding: 21px 14px 21px 24px;
   position: relative;
   top: auto;
 }
-aside .contact__link {
+.aside .contact__link {
   font-style: normal;
   font-size: 14px;
   margin: 0 0 13px;
   padding: 0 0 0 21px;
   position: relative;
 }
-aside .contact__link + .contact__link {
+.aside .contact__link + .contact__link {
   margin: 0 0 0 20px;
 }
-aside .contact__link .icon {
+.aside .contact__link .icon {
   position: absolute;
   left: -3px;
   top: -4px;
 }
-nav {
+.nav {
   width: 100%;
 }
-nav .list__item,
-nav .list__item .list__item {
+.nav .list__item,
+.nav .list__item .list__item {
   border-bottom: 1px solid #dae1eb;
   margin: 1px 0 0;
   position: relative;
 }
-nav .list__item:last-child {
+.nav .list__item:last-child {
   border-bottom: 0;
 }
-nav .list__item_active > .list__link {
+.nav .list__item_active > .list__trigger {
   background: #00b9fe;
   color: #FFF;
 }
-nav .list__link {
+.nav .list__inner {
+  display: none;
+}
+.nav .list__trigger {
   color: #5c7b98;
   display: block;
   font: 15px/15px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
   padding: 10px 0 7px 20px;
+  outline: none;
   text-decoration: none;
 }
-nav .list__link:hover {
+.nav .list__trigger:hover {
   background: #dce6f0;
 }
-nav .list__item .list .list__link {
+.nav .list__item .list__inner .list__link {
+  color: #5c7b98;
+  display: block;
+  font: 15px/15px 'elektra_light_proregular', Arial, Helvetica, sans-serif;
   padding: 7px 0 10px 32px;
+  outline: none;
+  text-decoration: none;
 }
 .content {
-  margin: 0 0 0 260px;
+  margin: 0 0 70px 260px;
 }
 .wrap_foot {
   background: url("../img/pattern.jpg") repeat;
@@ -804,11 +814,12 @@ footer .download {
   margin: 0;
 }
 .dl {
+  color: #5c7b98;
   display: block;
   padding: 0 25px 0 0;
 }
 .catalog {
-  margin: 0 0 39px;
+  margin: 0;
 }
 .catalog .list {
   margin: 0 0 20px;
@@ -822,6 +833,15 @@ footer .download {
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.catalog .list__link {
+  display: block;
+  float: left;
+  text-decoration: none;
+  width: 100%;
+}
+.catalog .list__descr {
+  margin: 0 15px 0 193px;
 }
 .catalog .list__photo {
   float: left;
@@ -841,8 +861,9 @@ footer .download {
   margin: auto;
 }
 .catalog .list__title {
+  text-decoration: underline;
   font-size: 15px;
-  margin: 32px 20px 20px 193px;
+  margin: 32px 20px 20px 0;
 }
 .catalog .list__txt {
   font-size: 14px;
@@ -903,13 +924,14 @@ footer .download {
   top: 10px;
   height: 104px;
   margin: 0 0 20px 90px;
-  width: 140px;
+  width: 125px;
 }
 .catalog__grid .list__title__link {
   display: table-cell;
   vertical-align: middle;
 }
 .catalog__grid .dl {
+  color: #5c7b98;
   clear: both;
   display: block;
   padding: 0;
@@ -923,10 +945,13 @@ footer .download {
   margin: 7px 0 0;
   width: 100px;
 }
-.intro__title {
+.catalog__grid .list__descr {
+  margin: 0;
+}
+.intro h2 {
   margin: 15px 0;
 }
-.intro__txt {
+.intro p {
   font-size: 15px;
   margin: 0 0 25px;
 }
@@ -1046,10 +1071,11 @@ footer .download {
   background-position: 0 -83px;
   color: #FFF;
   cursor: pointer;
+  display: none;
   font: 18px Arial, sans-serif;
   line-height: 39px;
   text-align: center;
-  right: 0;
+  right: -100px;
   position: absolute;
   bottom: -50px;
   top: auto;
@@ -1279,12 +1305,10 @@ footer .download {
   width: 13px;
 }
 .menu__top a:hover:first-child:before {
-  background-image: none;
-  border-top: 20px solid transparent;
-  border-left: 13px solid #dce6f0;
-  border-bottom: 20px solid transparent;
-  height: 0;
-  width: 0;
+  background: url("../img/sprite.png") 7px -161px no-repeat transparent;
+  left: -8px;
+  height: 40px;
+  width: 27px;
 }
 .menu__top a:hover {
   background: #dce6f0;

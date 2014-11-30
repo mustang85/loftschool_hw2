@@ -1,14 +1,12 @@
 $(function() {
 
-	/* вывод сеткой на главной */
+	/* output on the main grid */
 	$('#dropdownMenu1').on('click',function (e) {
 		var dropdownButton =  $('#dropdownMenu1'),
 			dropdownTextContainer = dropdownButton.find('.dropdown__text')
 			dropdownTextDefault = dropdownTextContainer.text(),
 			findList = $('.catalog .list'),
 			dropdownMenu = dropdownButton.next('.dropdown-menu');
-
-		console.log(dropdownTextDefault);
 
 		// допилю позже
 			// dropdownMenu.toggle();
@@ -29,7 +27,7 @@ $(function() {
 	});
 	
 
-	/* тук тук по вкладке корзина */
+	/* basket down */
 	$('.list__item_basket').on('click',function (e) {
 		e.preventDefault();
 
@@ -42,10 +40,25 @@ $(function() {
 		}
 	});
 
-	/* перемотка на верх */
-	$('.icon.but__up').on('click', function() {
-		$('body,document').animate({'scrollTop': 0}, 1500);	
-	})
+	/* scroll up page */
+	$(document).on('scroll', function () {
+		var but = $('.icon.but__up');
+
+		if ( $(document).scrollTop() >= 250 ) {		
+			but.fadeIn(400);
+
+			but.on('click', function() {
+				$('body,document').animate({'scrollTop': 0}, 1500);	
+			});
+
+			$(document).off('scroll');
+
+		} else {
+			but.fadeOut(400);
+		}
+
+	});
+
 
 	/* слайдер на странице номер 3, да знаю, 
 	нужно все перенести в модуль и оптимизировать */
@@ -111,4 +124,49 @@ $(function() {
 		}
 		
 	});
+
+	// accordion
+	// $('.nav .list__link').on('click', shopAccordion);
+
+	// function shopAccordion(e) {
+	// 	e.preventDefault();
+
+	// 	var link = $(this),
+	// 		nav = link.closest('.nav'),
+	// 		item1Level = link.closest('.list__item'),
+	// 		level2Nav = nav.find('a + .list');
+
+	// 	if (level2Nav.css('display') == 'none') {
+	// 		level2Nav.slideDown(400);
+	// 		item1Level.addClass('list__item_active ');
+	// 	} else {
+	// 		level2Nav.slideUp(400)
+	// 		item1Level.removeClass('list__item_active ');
+	// 	}
+	// }
+
+	$('.nav .list__trigger').on('click', function (e) {
+		e.preventDefault();
+
+		var $this = $(this),
+			item = $this.closest('.list__item'),
+			list = $this.closest('.list'),
+			items = list.find('.list__item'),
+			content = item.find('.list__inner')
+			otherContent = list.find('.list__inner'),
+			duration = 400;
+
+		if ( !item.hasClass('list__item_active') ) {
+			items.removeClass('list__item_active');
+			item.addClass('list__item_active');
+
+			otherContent.stop(true,true).slideUp(duration);
+			content.slideDown(duration);	
+		} else {
+			content.slideUp(duration);
+			item.stop(true,true).removeClass('list__item_active');
+		}
+		
+	});
+
 });

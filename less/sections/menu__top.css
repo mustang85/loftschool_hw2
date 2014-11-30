@@ -89,12 +89,10 @@
   width: 13px;
 }
 .menu__top a:hover:first-child:before {
-  background-image: none;
-  border-top: 20px solid transparent;
-  border-left: 13px solid #dce6f0;
-  border-bottom: 20px solid transparent;
-  height: 0;
-  width: 0;
+  background: url("../img/sprite.png") 7px -161px no-repeat transparent;
+  left: -8px;
+  height: 40px;
+  width: 27px;
 }
 .menu__top a:hover {
   background: #dce6f0;

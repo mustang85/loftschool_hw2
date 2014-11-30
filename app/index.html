@@ -14,6 +14,10 @@
 
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
     </head>
     <body>
         <div class="wrapper">
@@ -23,34 +27,38 @@
                 <header>
                     <div class="logo">
                         <a class="logo__link" href="#">
-                            <img class="logo__up" src="img/logo_up.png" height="57" width="199" alt="" />
+                            <img class="logo__up" src="img/logo_up.png" height="57" width="199" alt="logo" />
                         </a>
                     </div>
                     <div class="contact__shop">
-                        <a class="contact__link contact__link_phone" href="#">
+                        <a class="contact__link contact__link_phone" href="tel:79264580130">
                             <span class="contact__link__code">+7 (921)</span> 320 12 32</a>
-                        <a class="contact__link contact__link_mail" href="#">manager@company.com</a>
+                        <a class="contact__link contact__link_mail" href="mailto:sergeant-kir@mail.ru">manager@company.com</a>
                     </div>
 
                     <div class="menu__top">
-                        <a href="#">Мобильные телефоны</a>
-                        <a class="active" href="#">Планшеты</a>
-                        <a href="#">Мр3 плееры</a>
-                        <a href="#">Персональные компьютеры</a>
-                        <a href="#">Ноутбуки</a>
-                        <a href="#">Apple TV</a>
-                        <a href="#">Аксессуары</a>
+                        <a class="menu__link" href="#">Мобильные телефоны</a>
+                        <a class="menu__link active" href="#">Планшеты</a>
+                        <a class="menu__link" href="#">Мр3 плееры</a>
+                        <a class="menu__link" href="#">Персональные компьютеры</a>
+                        <a class="menu__link" href="#">Ноутбуки</a>
+                        <a class="menu__link" href="#">Apple TV</a>
+                        <a class="menu__link" href="#">Аксессуары</a>
                     </div>
                 </header>
             </div>
 
             <div class="main">
                 <div class="panel main__panel">
-                   <ol class="breadcrumb">
-                      <li><a href="#">Главная</a></li>
-                      <li><a href="#">Ай Пон</a></li>
-                      <li class="active">Каталог</li>
-                    </ol>
+                   <ul class="breadcrumb">
+                         <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="#">Главная</a></li>
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="#">Ай Пон</a>
+                        </li>
+                        <li class="breadcrumb__item active">Каталог</li>
+                    </ul>
+
                     <ul class="list pagination">
                         <li class="list__item">
                             <a class="list__link list__link_prew" href="#"><span>&laquo;</span></a>
@@ -81,12 +89,12 @@
                         </div>
                 </div>
                 
-                <aside>
-                    <nav>
+                <aside class="aside">
+                    <nav class="nav">
                         <ul class="list">
-                            <li class="list__item list__item_active">
-                                <a class="list__link" href="#">iPhone</a>
-                                    <ul class="list">
+                            <li class="list__item">
+                                <a class="list__trigger" href="#">iPhone</a>
+                                    <ul class="list__inner">
                                         <li class="list__item">
                                             <a class="list__link" href="#">
                                             <i class="icon icon_caret"></i>iPhone 4s</a>
@@ -110,19 +118,61 @@
 
                             </li>
                             <li class="list__item">
-                                <a class="list__link" href="#">iPad</a>
+                                <a class="list__trigger" href="#">iPad</a>
                             </li>
                             <li class="list__item">
-                                <a class="list__link" href="#">iMac</a>
+                                <a class="list__trigger" href="#">iMac</a>
+                                <ul class="list__inner">
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 4s</a>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 5</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 5s с эксклюзивным дизайном</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 6</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 6 plus</a> 
+                                        </li>
+                                    </ul>
                             </li>
                             <li class="list__item">
-                                <a class="list__link" href="#">Macbook</a>
+                                <a class="list__trigger" href="#">Macbook</a>
                             </li>
                             <li class="list__item">
-                                <a class="list__link" href="#">iPod</a>
+                                <a class="list__trigger" href="#">iPod</a>
+                                <ul class="list__inner">
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 4s</a>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 5</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 5s с эксклюзивным дизайном</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 6</a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a class="list__link" href="#">
+                                            <i class="icon icon_caret"></i>iPhone 6 plus</a> 
+                                        </li>
+                                    </ul>
                             </li>
                             <li class="list__item">
-                                <a class="list__link" href="#">Другое</a>
+                                <a class="list__trigger" href="#">Другое</a>
                             </li>
                         </ul>
                     </nav>
@@ -132,160 +182,174 @@
                     <div class="catalog">
                         <ul class="list">
                             <li class="list__item">
-                                <div class="list__photo">
-                                <a class="list__photo__link" href="#">
-                                    <img src="img/cat1.jpg" height="101" width="131" alt="" />
+                                <a class="list__link" href="#">
+                                    <div class="list__photo">
+                                        <img src="img/cat1.jpg" height="101" width="131" alt="apple product" />
+                                    </div>
+                                    <div class="list__descr">
+                                        <h3 class="list__title">
+                                            <span class="list__title__link">Apple Thunderbolt Display 27"</span>
+                                        </h3>
+                                        <dl class="dl">
+                                            <dt class="dt">Артикул</dt>
+                                            <dd class="dd">42787825</dd>
+                                            <dt class="dt">Опция</dt>
+                                            <dd class="dd">включена</dd>
+                                            <dt class="dt">Цвет</dt>
+                                            <dd class="dd">серебристый</dd>
+                                            <dt class="dt">Разме</dt>
+                                            <dd class="dd">1280*1245*90</dd>
+                                            <dt class="dt">Вес</dt>
+                                            <dd class="dd">9 кг</dd>
+                                        </dl>  
+                                    </div>
                                 </a>
-                                </div>
-                                <h3 class="list__title">
-                                    <a class="list__title__link" href="#">Apple Thunderbolt Display 27"</a>
-                                </h3>
-                                <dl class="dl">
-                                    <dt class="dt">Артикул</dt>
-                                    <dd class="dd">42787825</dd>
-                                    <dt class="dt">Опция</dt>
-                                    <dd class="dd">включена</dd>
-                                    <dt class="dt">Цвет</dt>
-                                    <dd class="dd">серебристый</dd>
-                                    <dt class="dt">Разме</dt>
-                                    <dd class="dd">1280*1245*90</dd>
-                                    <dt class="dt">Вес</dt>
-                                    <dd class="dd">9 кг</dd>
-                                </dl>  
                             </li>
 
                             <li class="list__item">
-                                <div class="list__photo">
-                                    <a class="list__photo__link" href="#">
-                                        <img src="img/cat2.jpg" height="119" width="131" alt="" />
-                                    </a>   
-                                </div>
-                                <h3 class="list__title">
-                                    <a class="list__title__link" href="#">Apple iMac 27"</a>
-                                </h3>
-                                <dl class="dl">
-                                    <dt class="dt">Артикул</dt>
-                                    <dd class="dd">42787825</dd>
-                                    <dt class="dt">Опция</dt>
-                                    <dd class="dd">включена</dd>
-                                    <dt class="dt">Цвет</dt>
-                                    <dd class="dd">серебристый</dd>
-                                    <dt class="dt">Разме</dt>
-                                    <dd class="dd">1280*1245*90</dd>
-                                    <dt class="dt">Вес</dt>
-                                    <dd class="dd">9 кг</dd>
-                                </dl>  
+                                <a class="list__link" href="#">
+                                    <div class="list__photo">
+                                        <img src="img/cat2.jpg" height="119" width="131" alt="apple product" />
+                                    </div>
+                                    <div class="list__descr">
+                                        <h3 class="list__title">
+                                            <span class="list__title__link">Apple iMac 27"</span>
+                                        </h3>
+                                        <dl class="dl">
+                                            <dt class="dt">Артикул</dt>
+                                            <dd class="dd">42787825</dd>
+                                            <dt class="dt">Опция</dt>
+                                            <dd class="dd">включена</dd>
+                                            <dt class="dt">Цвет</dt>
+                                            <dd class="dd">серебристый</dd>
+                                            <dt class="dt">Разме</dt>
+                                            <dd class="dd">1280*1245*90</dd>
+                                            <dt class="dt">Вес</dt>
+                                            <dd class="dd">9 кг</dd>
+                                        </dl>
+                                    </div>
+                                </a> 
                             </li>
 
                             <li class="list__item">
-                                <div class="list__photo">
-                                    <a class="list__photo__link" href="#">
-                                        <img src="img/cat3.jpg" height="96" width="101" alt="" />
-                                    </a>
-                                </div>
-                                <h3 class="list__title">
-                                    <a class="list__title__link" href="#">iPhone 5s Gold</a>
-                                </h3>
-                                <dl class="dl">
-                                    <dt class="dt">Артикул</dt>
-                                    <dd class="dd">42787825</dd>
-                                    <dt class="dt">Опция</dt>
-                                    <dd class="dd">включена</dd>
-                                    <dt class="dt">Цвет</dt>
-                                    <dd class="dd">серебристый</dd>
-                                    <dt class="dt">Разме</dt>
-                                    <dd class="dd">1280*1245*90</dd>
-                                    <dt class="dt">Вес</dt>
-                                    <dd class="dd">9 кг</dd>
-                                </dl>    
+                                <a class="list__link" href="#">
+                                    <div class="list__photo">
+                                            <img src="img/cat3.jpg" height="96" width="101" alt="apple product" />
+                                    </div>
+                                    <div class="list__descr">
+                                        <h3 class="list__title">
+                                            <span class="list__title__link">iPhone 5s Gold</span>
+                                        </h3>
+                                        <dl class="dl">
+                                            <dt class="dt">Артикул</dt>
+                                            <dd class="dd">42787825</dd>
+                                            <dt class="dt">Опция</dt>
+                                            <dd class="dd">включена</dd>
+                                            <dt class="dt">Цвет</dt>
+                                            <dd class="dd">серебристый</dd>
+                                            <dt class="dt">Разме</dt>
+                                            <dd class="dd">1280*1245*90</dd>
+                                            <dt class="dt">Вес</dt>
+                                            <dd class="dd">9 кг</dd>
+                                        </dl>
+                                    </div>
+                                </a>   
                             </li>
 
                             <li class="list__item">
-                                <div class="list__photo">
-                                    <a class="list__photo__link" href="#">
-                                        <img src="img/cat4.jpg" height="113" width="105" alt="" />
-                                    </a>
-                                </div>
-                                <h3 class="list__title">
-                                    <a class="list__title__link" href="#">iPad Air Wi-Fi + Cellular 128GB - Silver</a>
-                                </h3>
-                                <dl class="dl">
-                                    <dt class="dt">Артикул</dt>
-                                    <dd class="dd">42787825</dd>
-                                    <dt class="dt">Опция</dt>
-                                    <dd class="dd">включена</dd>
-                                    <dt class="dt">Цвет</dt>
-                                    <dd class="dd">серебристый</dd>
-                                    <dt class="dt">Разме</dt>
-                                    <dd class="dd">1280*1245*90</dd>
-                                    <dt class="dt">Вес</dt>
-                                    <dd class="dd">9 кг</dd>
-                                </dl> 
+                                <a class="list__link" href="#">
+                                    <div class="list__photo">
+                                        <img src="img/cat4.jpg" height="113" width="105" alt="apple product" />
+                                    </div>
+                                    <div class="list__descr">
+                                        <h3 class="list__title">
+                                            <span class="list__title__link">iPad Air Wi-Fi + Cellular 128GB - Silver</span>
+                                        </h3>
+                                    <dl class="dl">
+                                        <dt class="dt">Артикул</dt>
+                                        <dd class="dd">42787825</dd>
+                                        <dt class="dt">Опция</dt>
+                                        <dd class="dd">включена</dd>
+                                        <dt class="dt">Цвет</dt>
+                                        <dd class="dd">серебристый</dd>
+                                        <dt class="dt">Разме</dt>
+                                        <dd class="dd">1280*1245*90</dd>
+                                        <dt class="dt">Вес</dt>
+                                        <dd class="dd">9 кг</dd>
+                                    </dl>
+                                    </div>
+                                </a>
                             </li>
 
                             <li class="list__item">
-                                <div class="list__photo">
-                                    <a class="list__photo__link" href="#">
-                                        <img src="img/cat5.jpg" height="92" width="105" alt="" />
-                                    </a>
-                                </div>
-                                <h3 class="list__title">
-                                    <a class="list__title__link" href="#">Apple iPod nano 7G 16 ГБ Blue</a>
-                                </h3>
-                                <dl class="dl">
-                                    <dt class="dt">Артикул</dt>
-                                    <dd class="dd">42787825</dd>
-                                    <dt class="dt">Опция</dt>
-                                    <dd class="dd">включена</dd>
-                                    <dt class="dt">Цвет</dt>
-                                    <dd class="dd">серебристый</dd>
-                                    <dt class="dt">Разме</dt>
-                                    <dd class="dd">1280*1245*90</dd>
-                                    <dt class="dt">Вес</dt>
-                                    <dd class="dd">9 кг</dd>
-                                </dl> 
+                                <a class="list__link" href="#">
+                                    <div class="list__photo">
+                                        <img src="img/cat5.jpg" height="92" width="105" alt="apple product" />
+                                    </div>
+                                    <div class="list__descr">
+                                        <h3 class="list__title">
+                                            <span class="list__title__link">Apple iPod nano 7G 16 ГБ Blue</span>
+                                        </h3>
+                                        <dl class="dl">
+                                            <dt class="dt">Артикул</dt>
+                                            <dd class="dd">42787825</dd>
+                                            <dt class="dt">Опция</dt>
+                                            <dd class="dd">включена</dd>
+                                            <dt class="dt">Цвет</dt>
+                                            <dd class="dd">серебристый</dd>
+                                            <dt class="dt">Разме</dt>
+                                            <dd class="dd">1280*1245*90</dd>
+                                            <dt class="dt">Вес</dt>
+                                            <dd class="dd">9 кг</dd>
+                                        </dl>
+                                    </div>
+                                </a>
                             </li>
 
                             <li class="list__item">
-                                <div class="list__photo">
-                                    <a class="list__photo__link" href="#">
-                                        <img src="img/cat6.jpg" height="41" width="111" alt="" />
-                                    </a>
-                                </div>
-                                <h3 class="list__title">
-                                    <a class="list__title__link" href="#">Роутер Wi-Fi Apple AirPort Extreme Base Station</a>
-                                </h3>
-                                <dl class="dl">
-                                    <dt class="dt">Артикул</dt>
-                                    <dd class="dd">42787825</dd>
-                                    <dt class="dt">Опция</dt>
-                                    <dd class="dd">включена</dd>
-                                    <dt class="dt">Цвет</dt>
-                                    <dd class="dd">серебристый</dd>
-                                    <dt class="dt">Разме</dt>
-                                    <dd class="dd">1280*1245*90</dd>
-                                    <dt class="dt">Вес</dt>
-                                    <dd class="dd">9 кг</dd>
-                                </dl>  
+                                <a class="list__link" href="#">
+                                    <div class="list__photo">
+                                        <img src="img/cat6.jpg" height="41" width="111" alt="apple product" />
+                                    </div>
+                                    <div class="list__descr">
+                                        <h3 class="list__title">
+                                            <span class="list__title__link">Роутер Wi-Fi Apple AirPort Extreme Base Station</span>
+                                        </h3>
+                                        <dl class="dl">
+                                            <dt class="dt">Артикул</dt>
+                                            <dd class="dd">42787825</dd>
+                                            <dt class="dt">Опция</dt>
+                                            <dd class="dd">включена</dd>
+                                            <dt class="dt">Цвет</dt>
+                                            <dd class="dd">серебристый</dd>
+                                            <dt class="dt">Разме</dt>
+                                            <dd class="dd">1280*1245*90</dd>
+                                            <dt class="dt">Вес</dt>
+                                            <dd class="dd">9 кг</dd>
+                                        </dl>
+                                    </div>
+                                </a>
                             </li>
                             
                         </ul>
                     </div>
 
                     <div class="intro">
-                        <h2 class="intro__title">Пара слов о магазине</h2>
-                        <p class="intro__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p>
+                        <h2>Пара слов о магазине</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p>
                         <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
                     </div>
 
                 </div>
+
+                <div class="icon but__up">Наверх</div>
             </div>
 
             <div class="wrap_foot">
                 <footer>
-                    <div class="logo">
-                        <a href="#">
-                            <img src="img/logo_down.png" height="39" width="139" alt="">
+                    <div class="logo logo__down">
+                        <a class="logo__down__link" href="#">
+                            <img class="logo__down__img" src="img/logo_down.png" height="39" width="139" alt="logo">
                         </a>
                     </div>
 

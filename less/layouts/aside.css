@@ -18,28 +18,28 @@
 /* line-height */
 /* fonts */
 /* header */
-aside {
+.aside {
   float: left;
   position: relative;
   width: 230px;
 }
-aside .contact__shop {
+.aside .contact__shop {
   background: #f4f6f9;
   padding: 21px 14px 21px 24px;
   position: relative;
   top: auto;
 }
-aside .contact__link {
+.aside .contact__link {
   font-style: normal;
   font-size: 14px;
   margin: 0 0 13px;
   padding: 0 0 0 21px;
   position: relative;
 }
-aside .contact__link + .contact__link {
+.aside .contact__link + .contact__link {
   margin: 0 0 0 20px;
 }
-aside .contact__link .icon {
+.aside .contact__link .icon {
   position: absolute;
   left: -3px;
   top: -4px;

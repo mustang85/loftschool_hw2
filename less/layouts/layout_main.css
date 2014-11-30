@@ -19,6 +19,7 @@
 /* fonts */
 /* header */
 .main {
-  margin: 0 auto;
+  margin: 0 auto 70px;
+  position: relative;
   width: 1000px;
 }
